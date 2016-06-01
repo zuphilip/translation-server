@@ -51,6 +51,34 @@ Docker Container
 tba
 
 
+Swagger
+=======
+
+Initialize / update the submodules (zotero/* and swagger-ui) and build the server env:
+
+```
+git submodule init
+git submodule update --recursive
+./build.sh
+```
+
+Open two terminals at the root of this repository.
+
+Terminal 1 (translation-server):
+
+```
+./build/run_translation-server.sh
+```
+
+Terminal 2 (swagger):
+
+```
+./swagger.sh
+```
+
+Open a browser at http://localhost:8000 for the Swagger interface.
+
+
 Endpoints
 =========
 
