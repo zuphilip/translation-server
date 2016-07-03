@@ -3,7 +3,7 @@
 # 
 # USAGE:
 # $ docker build -t zts -f Dockerfile .
-# $ docker run -d --rm --port 1969:1969 --name zts-container zts
+# $ docker run --rm -p 1969:1969 --name zts-container zts
 # 
 
 FROM ubuntu:14.04
@@ -23,9 +23,6 @@ RUN tar xfv xulrunner.tar.bz2
 
 
 COPY . .
-
-# Edit config.js
-RUN sed -i 's/\/Users\/simon\/Desktop\/Development\/FS\/zotero\/translators/\/opt\/translation-server\/modules\/zotero\/translators/' config.js
 
 RUN ./build.sh
 
