@@ -10,7 +10,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y curl git firefox
 
-ENV VERSION 41.0.2
+ENV VERSION 29.0
 ENV ARCHITECTURE linux-x86_64
 # alternatively linux-i686
 
